@@ -1,6 +1,6 @@
 import express from 'express';
 import Response from './Response';
-import schema from '../schemas/health';
+import schema from '../schemas/Health';
 
 /**
  * Controller

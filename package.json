@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node src/server",
-    "lint": "eslint src"
+    "start": "nodemon --exec babel-node src/server.js",
+    "lint": "eslint src",
+    "test": "jest src"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -15,10 +16,13 @@
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.4",
+    "babel-jest": "^24.1.0",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-react": "7.11.0"
+    "eslint-plugin-react": "7.11.0",
+    "jest": "^24.1.0",
+    "supertest": "^3.4.2"
   }
 }

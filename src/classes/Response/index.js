@@ -1,5 +1,6 @@
 import { isString } from 'lodash/lang';
-import requires from '../helpers/requires';
+import requires from '../../helpers/requires';
+import DefaultError from '../../responses/DefaultError';
 
 /**
  * Response
@@ -48,5 +49,22 @@ export default class Response {
     } else {
       this._schema = schema;
     }
+  }
+
+  /**
+   * Export OpenAPI Specification
+   */
+  toOAS() {
+    return {
+      [this.statusCode]: {
+        description: this.description,
+        content: {
+          [this.contentType]: {
+            schema: this.schema,
+          },
+        },
+      },
+      default: DefaultError,
+    };
   }
 }
