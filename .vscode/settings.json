@@ -1,0 +1,10 @@
+{
+  "files.eol": "\n",
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    100,
+  ],
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "files.insertFinalNewline": true
+}
